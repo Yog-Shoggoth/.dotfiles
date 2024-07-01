@@ -232,21 +232,6 @@ window-rule {
     open-maximized true
 }
 
-window-rule {
-    match app-id="tofi-drun"
-    default-column-width {}
-    open-maximized true
-}
-
-window-rule {
-    match app-id="Windscribe"
-    draw-border-with-background false
-    min-width 325
-    max-width 325
-    min-height 325
-    max-height 500
-}
-
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -276,11 +261,10 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return { spawn "foot"; }
-    //Mod+Space { spawn "ags" "-t" "launcher"; }
     Mod+Space { spawn "fuzzel"; }
     Mod+W { spawn "firefox"; }
     Mod+E { spawn "foot" "-e" "yazi"; }
-    // Launch Steam via xwayland-satellite, slightly clunky, but it saves typing!
+    // Launch Steam and Heroic via xwayland-satellite, slightly clunky, but it saves typing!
     Mod+G { spawn "sh" "-c" "xwayland-satellite & foot env DISPLAY=:0 steam"; }
     Mod+Shift+G { spawn "sh" "-c" "xwayland-satellite & foot env DISPLAY=:0 heroic"; }
     Mod+Alt+L { spawn "swaylock" "-C" "/home/murray/.config/swaylock/niri.conf"; }
